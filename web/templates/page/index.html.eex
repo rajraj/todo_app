@@ -1,0 +1,11 @@
+<div class="row">
+  <input type="text" name="description" id="new_item" placeholder="New item"></input>
+  <div id="todo_items_container">
+    <h3>Outstanding Items</h3>
+    <ul id="outstanding_list">
+      <%= for item <- @outstanding_items do %>
+        <%= render "_item.html", item: item %>
+      <% end %>
+    </ul>
+  </div>
+</div>
